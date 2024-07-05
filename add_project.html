@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Add a New Project</h1>
+        <form id="addProjectForm">
+            <div class="form-group">
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName" required>
+            </div>
+            <div class="form-group">
+                <label for="projectSubject">Project Subject:</label>
+                <input type="text" id="projectSubject" name="projectSubject" required>
+            </div>
+            <div class="form-group">
+                <label for="projectDescription">Brief Description:</label>
+                <textarea id="projectDescription" name="projectDescription" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="projectTopics">Major Topics:</label>
+                <input type="text" id="projectTopics" name="projectTopics" required>
+            </div>
+            <div class="form-group">
+                <label for="userEmail">Institute Email:</label>
+                <input type="email" id="userEmail" name="userEmail" required placeholder="Enter your email">
+            </div>
+            <button type="submit" class="submit-button">Add Project</button>
+        </form>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>

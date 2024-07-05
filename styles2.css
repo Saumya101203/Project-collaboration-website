@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://analyticsindiamag.com/wp-content/uploads/2021/02/IIT-Patna-Launches-Post-Graduate-Certification-Programmes-In-AIML-Big-Data-Cybersecurity.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: start center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.projects-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: grid;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-project-button, .view-notifications-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-project-button {
+    background-color: #4CAF50;
+    margin-right: 10px;
+}
+
+.add-project-button:hover {
+    background-color: green;
+}
+
+.view-notifications-button {
+    background-color: red;
+}
+
+.view-notifications-button:hover {
+    background-color: #45a049;
+}
