@@ -1,4 +1,4 @@
-#Project Collaboration Website for College Projects
+# Project Collaboration Website for College Projects
 This project collaboration website facilitates seamless collaboration among students and faculty within a college environment. It integrates with the college's database, storing user credentials (email and password) securely in a users table. Users can log in using their registered email and password, ensuring secure access to the platform.
 
 Upon login, users can view ongoing projects across various departments, each listing details such as project name, subject, and a brief description. Users can express interest in projects by clicking an "Interested" button conveniently placed below each project description.
