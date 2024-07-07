@@ -28,18 +28,23 @@ h1 {
     margin-bottom: 20px;
 }
 
-.add-project-button, .view-notifications-button {
-    padding: 10px 20px;
-    font-size: 16px;
+button, .logout-button {
+    padding: 8px 16px;
+    font-size: 14px;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .add-project-button {
     background-color: #4CAF50;
-    margin-right: 10px;
+    width: 120px; /* Set a common width */
+    height: 40px; /* Set a common height */
+    margin: 0 auto; /* Center the button */
+    display: block; /* Ensure it behaves as a block element */
 }
 
 .add-project-button:hover {
@@ -47,9 +52,44 @@ h1 {
 }
 
 .view-notifications-button {
+    width: 120px; /* Increased width */
+    height: 40px; /* Increased height */
     background-color: red;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .view-notifications-button:hover {
     background-color: #45a049;
+}
+
+.logout-button {
+    width: 50px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background-color: #007BFF;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+.interested-button {
+    background-color: #4CAF50;
+    width: 120px; /* Set a common width */
+    height: 40px; /* Set a common height */
+}
+
+.interested-button:hover {
+    background-color: green;
+}
+
+.button-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
