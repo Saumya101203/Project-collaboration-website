@@ -27,7 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 interestedButton.className = 'interested-button';
                 interestedButton.textContent = 'Interested';
                 interestedButton.onclick = () => {
-                    saveNotification(project.id, project.email); // Pass project id and owner email
+                    getLoggedInUserEmail().then(loggedInUserEmail => {
+                        if (loggedInUserEmail) {
+                            saveNotification(project.id, loggedInUserEmail, project.email);
+                        }
+                    });
                 };
                 projectDiv.appendChild(interestedButton);
 
@@ -37,11 +41,22 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error fetching projects:', error));
 });
 
-function saveNotification(projectId, ownerEmail) {
-    // Replace with actual dynamic email retrieval (e.g., from session or authentication)
-    const loggedInUserEmail = prompt("Please enter your email:");
+function getLoggedInUserEmail() {
+    return fetch('get_session_email.php')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Logged-in email:', data.email); // Check this log
+            return data.email;
+        })
+        .catch(error => {
+            console.error('Error fetching session email:', error);
+            return null;
+        });
+}
+
+function saveNotification(projectId, loggedInUserEmail, ownerEmail) {
     if (!loggedInUserEmail) {
-        alert('Email is required to save notification.');
+        alert('Failed to retrieve logged-in email.');
         return;
     }
 
@@ -50,7 +65,7 @@ function saveNotification(projectId, ownerEmail) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ projectId: projectId, loggedInUserEmail: loggedInUserEmail })
+        body: JSON.stringify({ projectId: projectId, loggedInUserEmail: loggedInUserEmail, ownerEmail: ownerEmail })
     })
     .then(response => response.json())
     .then(data => {
@@ -62,4 +77,3 @@ function saveNotification(projectId, ownerEmail) {
     })
     .catch(error => console.error('Error saving notification:', error));
 }
-
