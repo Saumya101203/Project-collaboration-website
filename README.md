@@ -41,7 +41,7 @@ Access the MySQL admin panel from the XAMPP control panel.
 
 ## Additional Notes:
 
-- Ensure all necessary files and the `user_data` database are properly configured before hosting the website locally.
+- Ensure all necessary files and the `institute_db` database are properly configured before hosting the website locally.
 - Thoroughly test the website to ensure it meets project requirements before deployment.
 
 This platform enhances project visibility, fosters collaboration, and streamlines project management within the college community. Explore the README for more details and contributions.
