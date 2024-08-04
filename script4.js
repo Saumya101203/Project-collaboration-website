@@ -1,49 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Prompt for email and password
-    const userEmail = prompt("Enter your email:");
-    const userPassword = prompt("Enter your password:");
-
-    // Send request to verify email and password
-    fetch('verify_user.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email: userEmail, password: userPassword })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.authenticated) {
-            // If authenticated, fetch notifications for the user
-            fetchNotifications(userEmail);
-        } else {
-            alert('Invalid email or password. Please try again.');
-        }
-    })
-    .catch(error => console.error('Error verifying user:', error));
+    fetchNotifications();
 });
 
-function fetchNotifications(userEmail) {
+function fetchNotifications() {
     fetch('notifications.php', {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ userEmail: userEmail })
+        }
     })
     .then(response => response.json())
     .then(notifications => {
+        console.log('Fetched notifications:', notifications); // Debugging
         const notificationsContainer = document.getElementById('notifications');
-        notifications.forEach(notification => {
-            const notificationDiv = document.createElement('div');
-            notificationDiv.className = 'notification';
+        notificationsContainer.innerHTML = ''; // Clear previous notifications
 
-            const notificationText = document.createElement('p');
-            notificationText.textContent = `${notification.user_email} is interested in your project ${notification.projectName}`;
-            notificationDiv.appendChild(notificationText);
+        if (notifications.length === 0) {
+            notificationsContainer.innerHTML = '<p>No notifications available.</p>';
+        } else {
+            notifications.forEach(notification => {
+                const notificationDiv = document.createElement('div');
+                notificationDiv.className = 'notification';
 
-            notificationsContainer.appendChild(notificationDiv);
-        });
+                const notificationText = document.createElement('p');
+                notificationText.textContent = `${notification.user_email} is interested in your project ${notification.projectName}`;
+                notificationDiv.appendChild(notificationText);
+
+                notificationsContainer.appendChild(notificationDiv);
+            });
+        }
     })
     .catch(error => console.error('Error fetching notifications:', error));
 }
