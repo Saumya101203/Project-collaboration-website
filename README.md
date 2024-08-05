@@ -11,10 +11,6 @@ Upon login, users can view ongoing projects across various departments, each lis
 - **Express Interest:** Users can indicate their interest in projects.
 - **Add Project:** Functionality for any user to add their project to the platform.
 
-## Glimpses of the Site
-
-To view glimpses of the site, visit the `Glimpses of Site` folder.
-
 ## Local Hosting Using XAMPP
 
 ### Download XAMPP:
