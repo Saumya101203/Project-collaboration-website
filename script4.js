@@ -18,6 +18,9 @@ function fetchNotifications() {
         if (notifications.length === 0) {
             notificationsContainer.innerHTML = '<p>No notifications available.</p>';
         } else {
+            // Reverse the notifications array to display from bottom to top
+            notifications.reverse();
+
             notifications.forEach(notification => {
                 const notificationDiv = document.createElement('div');
                 notificationDiv.className = 'notification';
