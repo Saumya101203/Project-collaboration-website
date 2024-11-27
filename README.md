@@ -40,4 +40,21 @@ Access the MySQL admin panel from the XAMPP control panel.
 - Ensure all necessary files and the `institute_db` database are properly configured before hosting the website locally.
 - Thoroughly test the website to ensure it meets project requirements before deployment.
 
-This platform enhances project visibility, fosters collaboration, and streamlines project management within the college community. Explore the README for more details and contributions.
+### Done!!
+
+## Glimpses of Project
+
+### Login Page
+![Login Page](https://github.com/Saumya101203/Project-collaboration-website/blob/main/Pictures/Login%20Page.png)
+
+### Ongoing Projects Page
+![Ongoing Projects](https://github.com/Saumya101203/Project-collaboration-website/blob/main/Pictures/Ongoing%20Projects%20View%20Page.png)
+
+### Project Adding Page
+![Add Project](https://github.com/Saumya101203/Project-collaboration-website/blob/main/Pictures/Project%20Adding%20Page.png)
+
+### Notifications Tab
+![Notifications Tab](https://github.com/Saumya101203/Project-collaboration-website/blob/main/Pictures/Notifications%20Tab.png)
+
+
+
