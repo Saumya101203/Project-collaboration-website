@@ -44,7 +44,9 @@ Access the MySQL admin panel from the XAMPP control panel.
 
 
 ## Demo Video 
-[![Website Demo](https://youtu.be/86QF4AFVqB4)
+[![Website Demo](https://youtu.be/86QF4AFVqB4/0.jpg)](https://youtu.be/86QF4AFVqB4)
+
+
 ## Glimpses of Project
 
 ### Login Page
